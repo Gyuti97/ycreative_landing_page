@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { useLanguage } from "../context/LanguageContext";
 
 export function CTA() {
@@ -33,7 +34,10 @@ export function CTA() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <button className="group px-8 py-4 bg-purple-900 text-white hover:bg-purple-800 transition-all duration-300 flex items-center gap-3">
+              <Link 
+                to="/start-your-project"
+                className="group px-8 py-4 bg-purple-900 text-white hover:bg-purple-800 transition-all duration-300 flex items-center gap-3"
+              >
                 <span className="text-sm tracking-wider uppercase">{t('cta.button')}</span>
                 <svg 
                   className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
@@ -43,10 +47,10 @@ export function CTA() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </button>
+              </Link>
 
               <a 
-                href="mailto:hello@ycreative.co" 
+                href="mailto:hello@ycreative.art" 
                 className="text-sm tracking-wider text-slate-400 hover:text-purple-400 transition-colors uppercase"
               >
                 {t('cta.email')}
@@ -56,18 +60,18 @@ export function CTA() {
 
           {/* Trust signals */}
           <div className="pt-12 border-t border-slate-800">
-            <div className="grid grid-cols-3 gap-8 text-center">
+            <div className="grid grid-cols-3 gap-4 md:gap-8 text-center">
               <div>
-                <div className="text-3xl text-white mb-2">{t('cta.trust1.value')}</div>
-                <div className="text-xs tracking-wider text-slate-500 uppercase">{t('cta.trust1.label')}</div>
+                <div className="text-2xl md:text-3xl text-white mb-2">{t('cta.trust1.value')}</div>
+                <div className="text-[10px] md:text-xs tracking-wider text-slate-500 uppercase">{t('cta.trust1.label')}</div>
               </div>
               <div>
-                <div className="text-3xl text-white mb-2">{t('cta.trust2.value')}</div>
-                <div className="text-xs tracking-wider text-slate-500 uppercase">{t('cta.trust2.label')}</div>
+                <div className="text-2xl md:text-3xl text-white mb-2">{t('cta.trust2.value')}</div>
+                <div className="text-[10px] md:text-xs tracking-wider text-slate-500 uppercase">{t('cta.trust2.label')}</div>
               </div>
               <div>
-                <div className="text-3xl text-white mb-2">{t('cta.trust3.value')}</div>
-                <div className="text-xs tracking-wider text-slate-500 uppercase">{t('cta.trust3.label')}</div>
+                <div className="text-2xl md:text-3xl text-white mb-2">{t('cta.trust3.value')}</div>
+                <div className="text-[10px] md:text-xs tracking-wider text-slate-500 uppercase">{t('cta.trust3.label')}</div>
               </div>
             </div>
           </div>

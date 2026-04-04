@@ -1,7 +1,8 @@
+import { Link } from "react-router";
 import { useLanguage } from "../context/LanguageContext";
 
 export function Hero() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-slate-950">
@@ -28,7 +29,7 @@ export function Hero() {
           </div>
 
           {/* Main headline */}
-          <h1 className="text-[clamp(3rem,8vw,7rem)] leading-[0.95] tracking-tight text-white mb-8">
+          <h1 className={`${language === 'hu' ? 'text-[clamp(2.5rem,7vw,6.5rem)]' : 'text-[clamp(3rem,8vw,7rem)]'} leading-[0.95] tracking-tight text-white mb-8`}>
             {t('hero.headline1')}<br />
             {t('hero.headline2')}
           </h1>
@@ -50,8 +51,11 @@ export function Hero() {
           </div>
 
           {/* CTA */}
-          <div className="flex items-center gap-6">
-            <button className="group px-8 py-4 bg-purple-900 text-white hover:bg-purple-800 transition-all duration-300 flex items-center gap-3">
+          <div className="flex items-center">
+            <Link 
+              to="/start-your-project"
+              className="group px-8 py-4 bg-purple-900 text-white hover:bg-purple-800 transition-all duration-300 flex items-center gap-3"
+            >
               <span className="text-sm tracking-wider uppercase">{t('hero.cta.book')}</span>
               <svg 
                 className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
@@ -61,11 +65,7 @@ export function Hero() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </button>
-
-            <a href="#showcase" className="text-sm tracking-wider text-slate-400 hover:text-purple-400 transition-colors uppercase">
-              {t('hero.cta.work')}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

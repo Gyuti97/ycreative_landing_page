@@ -49,15 +49,15 @@ export function Process() {
         </div>
 
         {/* Process steps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-auto-rows-fr gap-12 lg:gap-16">
           {steps.map((step, index) => (
-            <div key={index} className="group relative">
+            <div key={index} className="group relative h-full">
               {/* Connector line - desktop only */}
               {index < steps.length - 1 && index % 2 === 0 && (
                 <div className="hidden lg:block absolute top-20 left-full w-full h-px bg-gradient-to-r from-purple-700/30 to-blue-700/30 -translate-y-1/2" />
               )}
 
-              <div className="relative bg-slate-950 border border-slate-800 p-8 group-hover:border-purple-700 transition-all duration-300">
+              <div className="relative h-full bg-slate-950 border border-slate-800 p-8 group-hover:border-purple-700 transition-all duration-300">
                 {/* Top accent */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-700 to-blue-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
@@ -79,29 +79,6 @@ export function Process() {
           ))}
         </div>
 
-        {/* Guarantee section */}
-        <div className="mt-20 bg-slate-950 border border-slate-800 p-12">
-          <div className="max-w-3xl">
-            <h3 className="text-xs tracking-[0.2em] text-slate-400 uppercase mb-4">{t('process.commitment')}</h3>
-            <p className="text-2xl text-white mb-6 leading-relaxed">
-              {t('process.commitment.text')}
-            </p>
-            <div className="flex flex-wrap gap-6 text-sm text-slate-400">
-              <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-purple-700 rounded-full" />
-                <span>{t('process.commitment.item1')}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-purple-700 rounded-full" />
-                <span>{t('process.commitment.item2')}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-purple-700 rounded-full" />
-                <span>{t('process.commitment.item3')}</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
