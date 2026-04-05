@@ -83,7 +83,7 @@ export function Showcase() {
                 preload="auto"
                 className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
               >
-                <source src="https://storage.googleapis.com/firehose-test-assets/y-creative-showcase.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/devicivta/video/upload/v1775347180/y_creative_website_480p_lrzje7.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
