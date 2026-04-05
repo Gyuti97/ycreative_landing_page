@@ -1,14 +1,20 @@
 import { Link } from "react-router";
 import { PageLayout } from "../components/PageLayout";
 import { useLanguage } from "../context/LanguageContext";
+import { SEO } from "../components/SEO";
 
 export function Advertising() {
   const { t } = useLanguage();
   return (
-    <PageLayout 
-      title={t('advertising.title')} 
-      subtitle={t('advertising.tagline')}
-    >
+    <>
+      <SEO 
+        title={t('seo.advertising.title')} 
+        description={t('seo.advertising.description')} 
+      />
+      <PageLayout 
+        title={t('advertising.title')} 
+        subtitle={t('advertising.tagline')}
+      >
       <div className="max-w-4xl space-y-20">
         {/* Slogan & Subheadline */}
         <div className="space-y-8">
@@ -68,6 +74,7 @@ export function Advertising() {
           </div>
         </div>
       </div>
-    </PageLayout>
+      </PageLayout>
+    </>
   );
 }

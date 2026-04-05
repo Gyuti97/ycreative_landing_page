@@ -84,7 +84,7 @@ export function Proof() {
                     rel="noopener noreferrer"
                     className="px-6 py-2 bg-white text-slate-950 text-xs tracking-widest uppercase font-bold hover:bg-purple-50 transition-colors"
                   >
-                    Visit Site
+                    {t('proof.visitSite')}
                   </a>
                 </div>
               </div>

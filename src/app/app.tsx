@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { HelmetProvider } from "react-helmet-async";
 import { Header } from "./components/Header";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { SEO } from "./components/SEO";
 import { Home } from "./pages/Home";
 import { Advertising } from "./pages/Advertising";
 import { VideoEditing } from "./pages/VideoEditing";
@@ -12,8 +14,10 @@ import { LanguageProvider } from "./context/LanguageContext";
 export default function App() {
   return (
     <LanguageProvider>
-      <Router>
-        <ScrollToTop />
+      <HelmetProvider>
+        <Router>
+          <ScrollToTop />
+          <SEO />
         <div className="min-h-screen bg-slate-950">
           <Header />
           <main>
@@ -28,6 +32,7 @@ export default function App() {
           </main>
         </div>
       </Router>
-    </LanguageProvider>
+    </HelmetProvider>
+  </LanguageProvider>
   );
 }

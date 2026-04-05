@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ycreative.art/</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ycreative.art/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://ycreative.art/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ycreative.art/"/>
+  </url>
+  <url>
+    <loc>https://ycreative.art/advertising</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ycreative.art/advertising"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://ycreative.art/advertising"/>
+  </url>
+  <url>
+    <loc>https://ycreative.art/video-editing</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ycreative.art/video-editing"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://ycreative.art/video-editing"/>
+  </url>
+  <url>
+    <loc>https://ycreative.art/webpage-building</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ycreative.art/webpage-building"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://ycreative.art/webpage-building"/>
+  </url>
+  <url>
+    <loc>https://ycreative.art/social-media</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ycreative.art/social-media"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://ycreative.art/social-media"/>
+  </url>
+  <url>
+    <loc>https://ycreative.art/start-your-project</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ycreative.art/start-your-project"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://ycreative.art/start-your-project"/>
+  </url>
+</urlset>

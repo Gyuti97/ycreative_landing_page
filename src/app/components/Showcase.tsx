@@ -77,6 +77,7 @@ export function Showcase() {
               {/* Video Element */}
               <video 
                 ref={videoRef}
+                autoPlay
                 loop 
                 muted 
                 playsInline

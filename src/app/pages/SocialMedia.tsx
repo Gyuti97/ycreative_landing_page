@@ -1,14 +1,20 @@
 import { Link } from "react-router";
 import { PageLayout } from "../components/PageLayout";
 import { useLanguage } from "../context/LanguageContext";
+import { SEO } from "../components/SEO";
 
 export function SocialMedia() {
   const { t } = useLanguage();
   return (
-    <PageLayout 
-      title={t('social.title')} 
-      subtitle={t('social.tagline')}
-    >
+    <>
+      <SEO 
+        title={t('seo.social.title')} 
+        description={t('seo.social.description')} 
+      />
+      <PageLayout 
+        title={t('social.title')} 
+        subtitle={t('social.tagline')}
+      >
       <div className="max-w-4xl space-y-20">
         {/* Slogan & Subheadline */}
         <div className="space-y-8">
@@ -68,6 +74,7 @@ export function SocialMedia() {
           </div>
         </div>
       </div>
-    </PageLayout>
+      </PageLayout>
+    </>
   );
 }

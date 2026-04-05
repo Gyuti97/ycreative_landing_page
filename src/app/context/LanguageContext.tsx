@@ -8,8 +8,23 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-const translations = {
+const translations: Record<Language, Record<string, string>> = {
   en: {
+    // SEO
+    'seo.title': 'Y Creative | Full-Scale Creative Agency',
+    'seo.description': 'Y Creative is a full-scale creative agency specializing in performance advertising, video editing, webpage building, and social media management.',
+    'seo.keywords': 'creative agency, performance marketing, video editing, web development, social media management, Google Ads, Meta Ads, TikTok Ads',
+    'seo.advertising.title': 'Performance Advertising | Y Creative',
+    'seo.advertising.description': 'Scale your business with high-performance Google, Meta, and TikTok advertising campaigns.',
+    'seo.video.title': 'Professional Video Editing | Y Creative',
+    'seo.video.description': 'High-impact video editing for social media, advertising, and brand storytelling.',
+    'seo.web.title': 'Webpage Building | Y Creative',
+    'seo.web.description': 'Custom, high-converting websites designed to grow your revenue.',
+    'seo.social.title': 'Social Media Management | Y Creative',
+    'seo.social.description': 'Strategic social media management to build your brand and engage your audience.',
+    'seo.start.title': 'Start Your Project | Y Creative',
+    'seo.start.description': 'Ready to scale? Fill out the form and let\'s start your creative project.',
+    
     // Header
     'header.cta': 'START PROJECT',
     'header.nav.advertising': 'ADVERTISING',
@@ -62,6 +77,7 @@ const translations = {
     'proof.cap6': 'Copywriting',
     'proof.cap7': 'Growth Hacking',
     'proof.cap8': 'Data Analytics',
+    'proof.visitSite': 'Visit Site',
 
     // Showcase
     'showcase.tagline': 'Selected Work',
@@ -70,18 +86,6 @@ const translations = {
     'showcase.description': 'We create high-impact visual content designed to stop the scroll and build lasting brand authority.',
     'showcase.cta': 'WORK WITH US',
     'showcase.project1.title': 'Professional E-commerce',
-    'showcase.project1.category': 'Web & Advertising',
-    'showcase.project2.title': 'Tech Startup Launch',
-    'showcase.project2.category': 'Social & Video',
-    'showcase.project3.title': 'Lifestyle Brand',
-    'showcase.project3.category': 'Full-Scale Creative',
-    'showcase.project4.title': 'B2B SaaS Platform',
-    'showcase.project4.category': 'Web & Performance',
-    'showcase.project5.title': 'Fashion Campaign',
-    'showcase.project5.category': 'Social & Content',
-    'showcase.project6.title': 'Service Marketplace',
-    'showcase.project6.category': 'Full-Scale Creative',
-    'showcase.cta': 'Explore our process',
 
     // Process
     'process.tagline': 'Our Approach',
@@ -165,6 +169,7 @@ const translations = {
     'start.form.project.placeholder': 'What are you building, promoting, or improving? What do you need help with?',
     
     'start.form.budget': 'Estimated budget',
+    'start.form.budget.placeholder': 'e.g. €2000 or "Not sure yet"',
     'start.form.budget.opt1': 'Under €500',
     'start.form.budget.opt2': '€500–€1,500',
     'start.form.budget.opt3': '€1,500–€3,000',
@@ -188,14 +193,21 @@ const translations = {
     'start.form.source.opt6': 'Other',
     
     'start.form.consent': 'I agree to being contacted regarding my inquiry and understand my details will only be used for project communication. *',
+    'start.form.privacy.notice': 'Your data is processed securely and only used for project communication.',
+    'start.form.error.missing_id': 'Contact form is currently unavailable. Please email us directly at hello@ycreative.art',
+    'start.button.back': 'Back',
     'start.button.submit': 'Submit Inquiry',
     
     'start.reassurance.title': 'No pressure. No generic proposals.',
     'start.reassurance.text': 'Just a clear first conversation around what your brand actually needs.',
     
     'start.success.title': 'Thanks — we’ve got your inquiry.',
+    'start.success.subtitle': 'Success',
     'start.success.text': 'We’ll review your project details and get back to you with the best next step.',
     'start.success.secondary': 'If your project is time-sensitive, feel free to mention it in your message.',
+    'start.success.back': 'Back to Home',
+    'start.process.tagline': 'Process',
+    'start.response.tagline': 'Response Time',
 
     // Advertising Page
     'advertising.title': 'Advertising that makes your brand impossible to ignore.',
@@ -242,6 +254,21 @@ const translations = {
     'social.channels': 'Social Channels',
   },
   hu: {
+    // SEO
+    'seo.title': 'Y Creative | Teljes Körű Kreatív Ügynökség',
+    'seo.description': 'Az Y Creative egy teljes körű kreatív ügynökség, amely teljesítményalapú hirdetésekre, videóvágásra, weboldalkészítésre és közösségi média kezelésre specializálódott.',
+    'seo.keywords': 'kreatív ügynökség, teljesítmény marketing, videóvágás, webfejlesztés, közösségi média kezelés, Google Ads, Meta Ads, TikTok Ads',
+    'seo.advertising.title': 'Teljesítményalapú Hirdetés | Y Creative',
+    'seo.advertising.description': 'Skálázza vállalkozását nagy teljesítményű Google, Meta és TikTok hirdetési kampányokkal.',
+    'seo.video.title': 'Professzionális Videóvágás | Y Creative',
+    'seo.video.description': 'Nagy hatású videóvágás közösségi médiához, hirdetésekhez és márkaépítéshez.',
+    'seo.web.title': 'Weboldalkészítés | Y Creative',
+    'seo.web.description': 'Egyedi, magas konverziójú weboldalak, amelyeket a bevétele növelésére terveztünk.',
+    'seo.social.title': 'Közösségi Média Kezelés | Y Creative',
+    'seo.social.description': 'Stratégiai közösségi média kezelés a márkaépítéshez és a közönség bevonásához.',
+    'seo.start.title': 'Projekt Indítása | Y Creative',
+    'seo.start.description': 'Készen áll a skálázásra? Töltse ki az űrlapot, és indítsuk el kreatív projektjét.',
+    
     // Header
     'header.cta': 'PROJEKT INDÍTÁSA',
     'header.nav.advertising': 'HIRDETÉS',
@@ -294,6 +321,7 @@ const translations = {
     'proof.cap6': 'Szövegírás',
     'proof.cap7': 'Growth Hacking',
     'proof.cap8': 'Adatelemzés',
+    'proof.visitSite': 'Weboldal megtekintése',
 
     // Showcase
     'showcase.tagline': 'Válogatott Munkáink',
@@ -302,18 +330,6 @@ const translations = {
     'showcase.description': 'Nagy hatású vizuális tartalmakat készítünk, amelyek megállítják a görgetést és tartós márka-tekintélyt építenek.',
     'showcase.cta': 'DOLGOZZ VELÜNK',
     'showcase.project1.title': 'Professzionális E-kereskedelem',
-    'showcase.project1.category': 'Web & Hirdetés',
-    'showcase.project2.title': 'Tech Startup Indítás',
-    'showcase.project2.category': 'Social & Videó',
-    'showcase.project3.title': 'Lifestyle Márka',
-    'showcase.project3.category': 'Teljes Körű Kreatív',
-    'showcase.project4.title': 'B2B SaaS Platform',
-    'showcase.project4.category': 'Web & Teljesítmény',
-    'showcase.project5.title': 'Divat Kampány',
-    'showcase.project5.category': 'Social & Tartalom',
-    'showcase.project6.title': 'Szolgáltatás Piactér',
-    'showcase.project6.category': 'Teljes Körű Kreatív',
-    'showcase.cta': 'Ismerd meg a folyamatunkat',
 
     // Process
     'process.tagline': 'A Mi Módszerünk',
@@ -397,6 +413,7 @@ const translations = {
     'start.form.project.placeholder': 'Min dolgozol jelenleg, mit szeretnél fejleszteni vagy elindítani, és miben van szükséged segítségre?',
     
     'start.form.budget': 'Becsült költségkeret',
+    'start.form.budget.placeholder': 'pl. 2000 € vagy "Még nem tudom"',
     'start.form.budget.opt1': '500 € alatt',
     'start.form.budget.opt2': '500–1 500 €',
     'start.form.budget.opt3': '1 500–3 000 €',
@@ -420,14 +437,21 @@ const translations = {
     'start.form.source.opt6': 'Egyéb',
     
     'start.form.consent': 'Elfogadom, hogy az Y Creative a megadott adataim alapján kapcsolatba lépjen velem az érdeklődésem kapcsán, és az adatokat kizárólag projektkommunikáció céljából használja fel. *',
+    'start.form.privacy.notice': 'Adatait biztonságosan kezeljük, és kizárólag projektkommunikációra használjuk fel.',
+    'start.form.error.missing_id': 'A kapcsolatfelvételi űrlap jelenleg nem érhető el. Kérjük, írjon nekünk közvetlenül a hello@ycreative.art címre.',
+    'start.button.back': 'Vissza',
     'start.button.submit': 'Érdeklődés elküldése',
     
     'start.reassurance.title': 'Nincs nyomás. Nincsenek sablonajánlatok.',
     'start.reassurance.text': 'Csak egy tiszta első beszélgetés arról, mire van valóban szüksége a márkádnak.',
     
     'start.success.title': 'Köszönjük, megkaptuk az érdeklődésedet.',
+    'start.success.subtitle': 'Siker',
     'start.success.text': 'Átnézzük a projekted részleteit, és a legjobb következő lépéssel jelentkezünk.',
     'start.success.secondary': 'Ha sürgős a projekt, ezt nyugodtan jelezd az üzenetben.',
+    'start.success.back': 'Vissza a főoldalra',
+    'start.process.tagline': 'Folyamat',
+    'start.response.tagline': 'Válaszidő',
 
     // Advertising Page
     'advertising.title': 'Hirdetések, amelyek mellett lehetetlen szó nélkül továbblépni.',
@@ -478,7 +502,23 @@ const translations = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguageState] = useState<Language>(() => {
+    try {
+      const saved = localStorage.getItem('ycreative_language');
+      return (saved === 'en' || saved === 'hu') ? saved : 'en';
+    } catch (e) {
+      return 'en';
+    }
+  });
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    try {
+      localStorage.setItem('ycreative_language', lang);
+    } catch (e) {
+      console.error('Failed to save language preference:', e);
+    }
+  };
 
   const t = (key: string): string => {
     return translations[language][key] || key;

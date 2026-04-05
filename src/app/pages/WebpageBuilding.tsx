@@ -1,14 +1,20 @@
 import { Link } from "react-router";
 import { PageLayout } from "../components/PageLayout";
 import { useLanguage } from "../context/LanguageContext";
+import { SEO } from "../components/SEO";
 
 export function WebpageBuilding() {
   const { t } = useLanguage();
   return (
-    <PageLayout 
-      title={t('web.title')} 
-      subtitle={t('web.tagline')}
-    >
+    <>
+      <SEO 
+        title={t('seo.web.title')} 
+        description={t('seo.web.description')} 
+      />
+      <PageLayout 
+        title={t('web.title')} 
+        subtitle={t('web.tagline')}
+      >
       <div className="max-w-4xl space-y-20">
         {/* Slogan & Subheadline */}
         <div className="space-y-8">
@@ -68,6 +74,7 @@ export function WebpageBuilding() {
           </div>
         </div>
       </div>
-    </PageLayout>
+      </PageLayout>
+    </>
   );
 }

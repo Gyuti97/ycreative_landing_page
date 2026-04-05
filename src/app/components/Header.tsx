@@ -184,11 +184,17 @@ export function Header() {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-0 bg-slate-950 z-40 lg:hidden transition-transform duration-500 ease-in-out ${
-          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed inset-0 bg-slate-950 z-40 lg:hidden transition-all duration-500 ease-in-out ${
+          mobileMenuOpen 
+            ? 'opacity-100 pointer-events-auto translate-x-0' 
+            : 'opacity-0 pointer-events-none translate-x-full'
         }`}
+        style={{ backgroundColor: '#020617' }} // Force solid slate-950
       >
-        <div className="flex flex-col h-full pt-32 px-6 pb-12">
+        <div className="flex flex-col h-full pt-32 px-6 pb-12 relative z-10 bg-slate-950">
+          {/* Background decorative element */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20 pointer-events-none" />
+          
           {/* Mobile Nav Links */}
           <nav className="flex flex-col gap-8 mb-12">
             {navLinks.map((link) => (

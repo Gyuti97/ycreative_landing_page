@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import { useLanguage } from "../context/LanguageContext";
 import { PageLayout } from "../components/PageLayout";
+import { SEO } from "../components/SEO";
 
 type FormData = {
   name: string;
@@ -38,6 +39,8 @@ export function StartProject() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const serviceParam = searchParams.get("service");
@@ -65,22 +68,57 @@ export function StartProject() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (step === 1) {
       setStep(2);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      // Final submission
-      console.log("Form submitted:", formData);
-      setIsSubmitted(true);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Final submission to Formspree
+      setIsSending(true);
+      setError(null);
+
+      const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
+      
+      if (!formspreeId) {
+        console.error("Formspree ID is missing. Please add VITE_FORMSPREE_ID to your environment variables.");
+        setError(t('start.form.error.missing_id'));
+        setIsSending(false);
+        return;
+      }
+
+      try {
+        const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            ...formData,
+            _subject: `New Project Inquiry from ${formData.brand}`,
+          })
+        });
+
+        if (response.ok) {
+          setIsSending(false);
+          setIsSubmitted(true);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          const data = await response.json();
+          throw new Error(data.error || 'Failed to send message');
+        }
+      } catch (err) {
+        setIsSending(false);
+        setError(err instanceof Error ? err.message : 'An unexpected error occurred. Please try again later.');
+        console.error("Submission error:", err);
+      }
     }
   };
 
   if (isSubmitted) {
     return (
-      <PageLayout title={t('start.success.title')} subtitle="Success">
+      <PageLayout title={t('start.success.title')} subtitle={t('start.success.subtitle')}>
         <div className="max-w-2xl space-y-8">
           <div className="flex items-center gap-4">
             <div className="h-12 w-1 bg-gradient-to-b from-purple-700 to-blue-700" />
@@ -99,7 +137,7 @@ export function StartProject() {
             }}
             className="px-6 py-3 bg-purple-900 text-white hover:bg-purple-800 transition-all duration-300 uppercase text-sm tracking-widest"
           >
-            Back to Home
+            {t('start.success.back')}
           </button>
         </div>
       </PageLayout>
@@ -107,7 +145,12 @@ export function StartProject() {
   }
 
   return (
-    <PageLayout 
+    <>
+      <SEO 
+        title={t('seo.start.title')} 
+        description={t('seo.start.description')} 
+      />
+      <PageLayout 
       title={
         <>
           {t('start.hero.headline')}{' '}
@@ -122,11 +165,11 @@ export function StartProject() {
         {/* Support & Trust */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-12 border-b border-slate-800">
           <div className="space-y-2">
-            <p className="text-sm tracking-widest text-purple-500 uppercase font-mono">Process</p>
+            <p className="text-sm tracking-widest text-purple-500 uppercase font-mono">{t('start.process.tagline')}</p>
             <p className="text-lg text-slate-300">{t('start.hero.support')}</p>
           </div>
           <div className="space-y-2">
-            <p className="text-sm tracking-widest text-blue-500 uppercase font-mono">Response Time</p>
+            <p className="text-sm tracking-widest text-blue-500 uppercase font-mono">{t('start.response.tagline')}</p>
             <p className="text-lg text-slate-300">{t('start.hero.trust')}</p>
           </div>
         </div>
@@ -271,20 +314,14 @@ export function StartProject() {
 
                   <div className="space-y-2">
                     <label className="text-sm text-slate-400 uppercase tracking-wider">{t('start.form.budget')}</label>
-                    <select 
+                    <input 
+                      type="text"
                       name="budget"
                       value={formData.budget}
                       onChange={handleInputChange}
-                      className="w-full bg-slate-900/50 border border-slate-800 p-4 text-white focus:border-purple-600 outline-none transition-colors appearance-none"
-                    >
-                      <option value="" disabled>{t('start.form.budget')}</option>
-                      <option value={t('start.form.budget.opt1')}>{t('start.form.budget.opt1')}</option>
-                      <option value={t('start.form.budget.opt2')}>{t('start.form.budget.opt2')}</option>
-                      <option value={t('start.form.budget.opt3')}>{t('start.form.budget.opt3')}</option>
-                      <option value={t('start.form.budget.opt4')}>{t('start.form.budget.opt4')}</option>
-                      <option value={t('start.form.budget.opt5')}>{t('start.form.budget.opt5')}</option>
-                      <option value={t('start.form.budget.opt6')}>{t('start.form.budget.opt6')}</option>
-                    </select>
+                      placeholder={t('start.form.budget.placeholder')}
+                      className="w-full bg-slate-900/50 border border-slate-800 p-4 text-white focus:border-purple-600 outline-none transition-colors"
+                    />
                   </div>
 
                   <div className="space-y-2">
@@ -339,20 +376,39 @@ export function StartProject() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-6 pt-8">
-                  <button 
-                    type="button"
-                    onClick={() => setStep(1)}
-                    className="text-sm tracking-widest text-slate-500 hover:text-white transition-colors uppercase"
-                  >
-                    Back
-                  </button>
-                  <button 
-                    type="submit"
-                    className="px-8 py-3 bg-purple-900 text-white hover:bg-purple-800 transition-all duration-300 uppercase text-sm tracking-widest font-bold"
-                  >
-                    {t('start.button.submit')}
-                  </button>
+                <div className="flex flex-col gap-6 pt-8">
+                  {error && (
+                    <div className="p-4 bg-red-900/20 border border-red-900/50 text-red-400 text-sm">
+                      {error}
+                    </div>
+                  )}
+                  <div className="flex items-center gap-6">
+                    <button 
+                      type="button"
+                      disabled={isSending}
+                      onClick={() => setStep(1)}
+                      className="text-sm tracking-widest text-slate-500 hover:text-white transition-colors uppercase disabled:opacity-50"
+                    >
+                      {t('start.button.back')}
+                    </button>
+                    <button 
+                      type="submit"
+                      disabled={isSending}
+                      className="px-8 py-3 bg-purple-900 text-white hover:bg-purple-800 transition-all duration-300 uppercase text-sm tracking-widest font-bold disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-3"
+                    >
+                      {isSending ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                          {t('start.form.sending')}
+                        </>
+                      ) : (
+                        t('start.button.submit')
+                      )}
+                    </button>
+                  </div>
+                  <p className="text-[10px] text-slate-500 max-w-xs leading-tight opacity-60">
+                    {t('start.form.privacy.notice')}
+                  </p>
                 </div>
               </motion.div>
             )}
@@ -372,6 +428,7 @@ export function StartProject() {
           </div>
         </div>
       </div>
-    </PageLayout>
+      </PageLayout>
+    </>
   );
 }

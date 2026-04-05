@@ -1,14 +1,20 @@
 import { Link } from "react-router";
 import { PageLayout } from "../components/PageLayout";
 import { useLanguage } from "../context/LanguageContext";
+import { SEO } from "../components/SEO";
 
 export function VideoEditing() {
   const { t } = useLanguage();
   return (
-    <PageLayout 
-      title={t('video.title')} 
-      subtitle={t('video.tagline')}
-    >
+    <>
+      <SEO 
+        title={t('seo.video.title')} 
+        description={t('seo.video.description')} 
+      />
+      <PageLayout 
+        title={t('video.title')} 
+        subtitle={t('video.tagline')}
+      >
       <div className="max-w-4xl space-y-20">
         {/* Slogan & Subheadline */}
         <div className="space-y-8">
@@ -68,6 +74,7 @@ export function VideoEditing() {
           </div>
         </div>
       </div>
-    </PageLayout>
+      </PageLayout>
+    </>
   );
 }
