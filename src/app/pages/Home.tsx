@@ -1,4 +1,5 @@
 import { Hero } from "../components/Hero";
+import { LogoStrip } from "../components/LogoStrip";
 import { Proof } from "../components/Proof";
 import { Platforms } from "../components/Platforms";
 import { Showcase } from "../components/Showcase";
@@ -11,6 +12,7 @@ export function Home() {
     <>
       <SEO />
       <Hero />
+      <LogoStrip />
       <Proof />
       <Platforms />
       <Showcase />
