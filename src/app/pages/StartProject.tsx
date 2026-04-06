@@ -78,17 +78,18 @@ export function StartProject() {
       setIsSending(true);
       setError(null);
 
-      const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
+      // Priority: Environment Variable > Hardcoded Fallback
+      const formspreeId = import.meta.env.VITE_FORMSPREE_ID || 'xpqokzgg';
       
-      if (!formspreeId) {
-        console.error("Formspree ID is missing. Please add VITE_FORMSPREE_ID to your environment variables.");
+      if (!formspreeId || formspreeId === 'YOUR_ID_HERE') {
+        console.error("Formspree ID is missing.");
         setError(t('start.form.error.missing_id'));
         setIsSending(false);
         return;
       }
 
       try {
-        const response = await fetch(`https://formspree.io/f/${xpqokzgg}`, {
+        const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
