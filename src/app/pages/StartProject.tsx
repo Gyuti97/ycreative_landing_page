@@ -78,7 +78,7 @@ export function StartProject() {
       setIsSending(true);
       setError(null);
 
-      const formspreeId = import.meta.env.xpqokzgg;
+      const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
       
       if (!formspreeId) {
         console.error("Formspree ID is missing. Please add VITE_FORMSPREE_ID to your environment variables.");
@@ -88,7 +88,7 @@ export function StartProject() {
       }
 
       try {
-        const response = await fetch(`https://formspree.io/f/xpqokzgg`, {
+        const response = await fetch(`https://formspree.io/f/${xpqokzgg}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
