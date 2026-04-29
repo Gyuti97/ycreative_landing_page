@@ -45,6 +45,81 @@ export function WebpageBuilding() {
           ))}
         </div>
 
+        {/* Testimonials / Recent Works */}
+        <div className="space-y-12">
+          <div className="flex items-center gap-3">
+            <div className="h-px w-12 bg-gradient-to-r from-purple-700 to-blue-700" />
+            <span className="text-xs tracking-[0.2em] text-slate-400 uppercase">{t('proof.recentWorks.tagline')}</span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {[
+              {
+                title: t('proof.recentWorks.sentiment.title'),
+                url: 'https://sentiment.hu',
+                description: t('proof.recentWorks.sentiment.desc'),
+                color: 'from-blue-900 to-slate-900'
+              },
+              {
+                title: t('proof.recentWorks.bigicepdr.title'),
+                url: 'https://bigicepdr.hu',
+                description: t('proof.recentWorks.bigicepdr.desc'),
+                color: 'from-purple-900 to-slate-900'
+              },
+              {
+                title: t('proof.recentWorks.designbyschmidt.title'),
+                url: 'https://designbyschmidt.eu',
+                description: t('proof.recentWorks.designbyschmidt.desc'),
+                color: 'from-slate-800 to-slate-900'
+              }
+            ].map((work, index) => (
+              <div key={index} className="group relative flex flex-col">
+                <div className="relative aspect-video bg-slate-950 border border-slate-800 overflow-hidden mb-6 group-hover:border-purple-700 transition-all duration-500">
+                  {/* Browser Header */}
+                  <div className="h-8 bg-slate-900 border-b border-slate-800 flex items-center px-4 gap-1.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-700" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-700" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-700" />
+                  </div>
+                  
+                  {/* Image Placeholder with mshots */}
+                  <div className="absolute inset-0 top-8">
+                    <img 
+                      src={`https://s.wordpress.com/mshots/v1/${work.url}?w=800`}
+                      alt={work.title}
+                      className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${work.color} opacity-20 group-hover:opacity-10 transition-opacity duration-500`} />
+                  </div>
+
+                  <div className="absolute inset-0 top-8 p-6 flex flex-col justify-end items-start bg-gradient-to-t from-slate-950/80 to-transparent">
+                    <div className="text-xl font-bold text-white mb-1 tracking-tight">{work.title}</div>
+                    <div className="text-[10px] text-slate-400 font-mono tracking-wider">{work.url.replace('https://', '')}</div>
+                  </div>
+
+                  <div className="absolute inset-0 top-8 bg-purple-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <a 
+                      href={work.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="px-6 py-2 bg-white text-slate-950 text-xs tracking-widest uppercase font-bold hover:bg-purple-50 transition-colors"
+                    >
+                      {t('proof.visitSite')}
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg text-white mb-2">{work.title}</h3>
+                  <p className="text-sm text-slate-400 leading-relaxed">
+                    {work.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* CTA Section */}
         <div className="pt-12 border-t border-slate-800">
           <div className="bg-gradient-to-br from-slate-900 to-slate-950 p-12 rounded-sm border border-slate-800 relative overflow-hidden group">
@@ -78,3 +153,4 @@ export function WebpageBuilding() {
     </>
   );
 }
+
