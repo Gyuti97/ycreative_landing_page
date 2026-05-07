@@ -236,7 +236,7 @@ const translations: Record<Language, Record<string, string>> = {
     'privacy.section.1.content': 'Name: Y Creative\nEmail: hello@ycreative.art\nWebsite: https://ycreative.art',
     
     'privacy.section.2.title': '2. Service Description',
-    'privacy.section.2.content': 'The provider offers graphic and digital services, especially: logo design, brand identity, print materials, apparel design, website design and development, decoration and visual solutions. Services are always based on unique agreement (quote).',
+    'privacy.section.2.content': 'The provider offers creative agency services, especially: performance advertising (Google, Meta, TikTok), professional video editing (reels, ads, brand stories), custom webpage building and conversion design, and strategic social media management. Services are always based on unique agreement (quote).',
     
     'privacy.section.3.title': '3. Contract Formation',
     'privacy.section.3.content': 'The contract is formed by: acceptance of a written quote (via email or other means) or signing a separate agreement. By accepting the offer, the customer accepts these terms.',
@@ -557,7 +557,7 @@ const translations: Record<Language, Record<string, string>> = {
     'privacy.section.1.content': 'Név: Y Creative\nEmail: hello@ycreative.art\nWeboldal: https://ycreative.art',
 
     'privacy.section.2.title': '2. A szolgáltatás leírása',
-    'privacy.section.2.content': 'A szolgáltató grafikai és digitális szolgáltatásokat nyújt, különösen: logótervezés, arculattervezés, nyomdai anyagok (névjegy, szórólap, stb.), pólódesign, weboldal tervezés és fejlesztés, dekorációs és vizuális megoldások. A szolgáltatás minden esetben egyedi megállapodás (árajánlat) alapján történik.',
+    'privacy.section.2.content': 'A szolgáltató kreatív ügynökségi szolgáltatásokat nyújt, különösen: teljesítményalapú hirdetések kezelése (Google, Meta, TikTok), professzionális videóvágás (reels, hirdetések, márkafilmek), egyedi weboldal tervezés és konverzió-optimalizált kivitelezés, valamint stratégiai social media management. A szolgáltatás minden esetben egyedi megállapodás (árajánlat) alapján történik.',
 
     'privacy.section.3.title': '3. Szerződés létrejötte',
     'privacy.section.3.content': 'A szerződés az alábbi módon jön létre: írásos árajánlat elfogadásával (emailben vagy egyéb módon) vagy külön megállapodás aláírásával. Az ajánlat elfogadásával a megrendelő elfogadja jelen ÁSZF rendelkezéseit.',
