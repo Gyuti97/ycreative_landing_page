@@ -126,7 +126,7 @@ export function Header() {
             {/* CTA */}
             <Link 
               to="/start-your-project"
-              className="px-6 py-2.5 bg-purple-900 text-white text-sm tracking-wide hover:bg-purple-800 transition-colors duration-200"
+              className="h-10 px-6 flex items-center justify-center bg-purple-900 text-white text-sm tracking-wide hover:bg-purple-800 transition-colors duration-200 rounded-sm"
             >
               {t('header.cta')}
             </Link>

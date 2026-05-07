@@ -102,9 +102,17 @@ export function CTA() {
               </div>
             </div>
 
-            {/* Copyright */}
-            <div className="text-xs text-slate-500">
-              © {new Date().getFullYear()} {t('cta.copyright')}
+            {/* Copyright and Legal */}
+            <div className="flex flex-col md:flex-row items-center gap-6 text-[10px] md:text-xs tracking-wider uppercase font-mono">
+              <div className="flex gap-4">
+                <Link to="/adatkezeles" className="text-slate-500 hover:text-purple-400 transition-colors">
+                  {t('footer.privacy')} / {t('footer.terms')}
+                </Link>
+              </div>
+              <div className="text-slate-700 hidden md:block">|</div>
+              <div className="text-slate-500">
+                © {new Date().getFullYear()} {t('cta.copyright')}
+              </div>
             </div>
           </div>
         </div>

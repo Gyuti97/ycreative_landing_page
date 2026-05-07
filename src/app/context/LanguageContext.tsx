@@ -68,6 +68,8 @@ const translations: Record<Language, Record<string, string>> = {
     'proof.recentWorks.sentiment.desc': 'Bold, artistic web presence for a professional tattoo artist.',
     'proof.recentWorks.bigicepdr.title': 'Bigicepdr.hu',
     'proof.recentWorks.bigicepdr.desc': 'Dynamic, result-oriented platform for automotive repair services.',
+    'proof.recentWorks.designbyschmidt.title': 'Designbyschmidt.eu',
+    'proof.recentWorks.designbyschmidt.desc': 'Professional digital presence for decals, graphic design and branding services.',
     'proof.capabilities': 'Core Capabilities',
     'proof.cap1': 'Performance Ads',
     'proof.cap2': 'Conversion Design',
@@ -209,6 +211,81 @@ const translations: Record<Language, Record<string, string>> = {
     'start.process.tagline': 'Process',
     'start.response.tagline': 'Response Time',
 
+    'start.cta.title': 'Ready to start your project?',
+    'start.cta.description': 'To give you the best possible start, please send us an email with the following details:',
+    'start.cta.item1': 'Brand name and website/social link',
+    'start.cta.item2': 'Service interested in (Ads, Video, Web, etc.)',
+    'start.cta.item3': 'Primary goal for the project',
+    'start.cta.item4': 'Project scope and estimated budget',
+    'start.cta.item5': 'Preferred timeline',
+    'start.cta.email_btn': 'SEND EMAIL',
+    'start.cta.call_btn': 'CALL US',
+    'start.cta.phone_val': '+36 30 373 7451',
+    'start.cta.phone_val2': '+36 30 826 3994',
+
+    // Footer
+    'footer.privacy': 'Privacy Policy',
+    'footer.terms': 'Terms & Conditions',
+
+    // Privacy Page
+    'privacy.title': 'Terms & Data Protection',
+    'privacy.back': 'Back to home',
+    'privacy.last_updated': 'Effective from: 2026.05.07.',
+    
+    'privacy.section.1.title': '1. Provider Details',
+    'privacy.section.1.content': 'Name: Y Creative\nEmail: hello@ycreative.art\nWebsite: https://ycreative.art',
+    
+    'privacy.section.2.title': '2. Service Description',
+    'privacy.section.2.content': 'The provider offers graphic and digital services, especially: logo design, brand identity, print materials, apparel design, website design and development, decoration and visual solutions. Services are always based on unique agreement (quote).',
+    
+    'privacy.section.3.title': '3. Contract Formation',
+    'privacy.section.3.content': 'The contract is formed by: acceptance of a written quote (via email or other means) or signing a separate agreement. By accepting the offer, the customer accepts these terms.',
+    
+    'privacy.section.4.title': '4. Fees and Payment',
+    'privacy.section.4.content': 'Service fees are determined by individual quotes. Payment: bank transfer or cash. Invoicing: electronic invoice via Billingo. Payment deadline as specified in the quote/invoice.',
+    
+    'privacy.section.5.title': '5. Performance',
+    'privacy.section.5.content': 'Completion deadlines are uniquely determined. Customers must provide required data on time and give feedback on drafts.',
+    
+    'privacy.section.6.title': '6. Copyright',
+    'privacy.section.6.content': 'Graphic and digital materials created by the provider are under copyright protection. Usage rights are transferred after full payment and only for the specified use. Provider may use works as reference unless agreed otherwise.',
+    
+    'privacy.section.7.title': '7. Limitation of Liability',
+    'privacy.section.7.content': 'Provider is not liable for damages caused by third parties, incorrect/incomplete client data, or technical system failures (hosting, etc.). Liability is limited to the service fee.',
+    
+    'privacy.section.8.title': '8. Termination',
+    'privacy.section.8.content': 'Contract ends by completion, mutual agreement, or cancellation. For work already started, provider is entitled to the fee for work performed.',
+    
+    'privacy.section.9.title': '9. Scope of Managed Data',
+    'privacy.section.9.content': 'Name, company name, email, phone number, billing address, tax number.',
+    
+    'privacy.section.10.title': '10. Purpose of Data Handling',
+    'privacy.section.10.content': 'Quotes, communication, contract performance, invoicing, legal obligations.',
+    
+    'privacy.section.11.title': '11. Legal Basis',
+    'privacy.section.11.content': 'GDPR Article 6(1)(b) – Contract performance; GDPR Article 6(1)(c) – Legal obligation.',
+    
+    'privacy.section.12.title': '12. Data Storage Duration',
+    'privacy.section.12.content': 'Contact data: max 12 months; Contract data: 5 years; Billing data: 8 years.',
+    
+    'privacy.section.13.title': '13. Data Processors',
+    'privacy.section.13.content': 'Invoicing: Billingo Technologies Zrt.; Hosting: Rackhost Zrt.; Accounting: Billing data is forwarded to the accountant.',
+    
+    'privacy.section.14.title': '14. Data Security',
+    'privacy.section.14.content': 'Provider applies appropriate technical and organizational measures to protect data.',
+    
+    'privacy.section.15.title': '15. Data Subject Rights',
+    'privacy.section.15.content': 'Right to access, rectify, delete, or restrict processing. Contact: hello@ycreative.art',
+    
+    'privacy.section.16.title': '16. Remedy',
+    'privacy.section.16.content': 'National Authority for Data Protection and Freedom of Information (NAIH): https://naih.hu',
+    
+    'privacy.section.17.title': '17. Cookie Notice',
+    'privacy.section.17.content': 'Website only uses strictly necessary cookies. No analytics or marketing data collection.',
+    
+    'privacy.section.18.title': '18. Final Provisions',
+    'privacy.section.18.content': 'Provider reserves the right to modify this document. Current version available on the website.',
+
     // Advertising Page
     'advertising.title': 'Advertising that makes your brand impossible to ignore.',
     'advertising.tagline': 'Performance Advertising',
@@ -312,6 +389,8 @@ const translations: Record<Language, Record<string, string>> = {
     'proof.recentWorks.sentiment.desc': 'Merész, művészi webes jelenlét egy professzionális tetoválóművész számára.',
     'proof.recentWorks.bigicepdr.title': 'Bigicepdr.hu',
     'proof.recentWorks.bigicepdr.desc': 'Dinamikus, eredményorientált platform autójavító szolgáltatásokhoz.',
+    'proof.recentWorks.designbyschmidt.title': 'Designbyschmidt.eu',
+    'proof.recentWorks.designbyschmidt.desc': 'Professzionális digitális jelenlét fóliázás, grafikai tervezés és branding szolgáltatásokhoz.',
     'proof.capabilities': 'Fő Kompetenciák',
     'proof.cap1': 'Teljesítmény Hirdetések',
     'proof.cap2': 'Konverziós Dizájn',
@@ -452,6 +531,81 @@ const translations: Record<Language, Record<string, string>> = {
     'start.success.back': 'Vissza a főoldalra',
     'start.process.tagline': 'Folyamat',
     'start.response.tagline': 'Válaszidő',
+
+    'start.cta.title': 'Készen állsz a közös munkára?',
+    'start.cta.description': 'A legjobb kezdés érdekében kérlek, küldj egy e-mailt nekünk az alábbi részletekkel:',
+    'start.cta.item1': 'Márkanév és weboldal/social link',
+    'start.cta.item2': 'Melyik szolgáltatás érdekel (Hirdetés, Videó, Web, stb.)',
+    'start.cta.item3': 'Mi a projekt elsődleges célja?',
+    'start.cta.item4': 'Projekt hatóköre és becsült költségkeret',
+    'start.cta.item5': 'Preferált időzítés',
+    'start.cta.email_btn': 'E-MAIL KÜLDÉSE',
+    'start.cta.call_btn': 'HÍVJ MINKET',
+    'start.cta.phone_val': '+36 30 373 7451',
+    'start.cta.phone_val2': '+36 30 826 3994',
+
+    // Footer
+    'footer.privacy': 'Adatkezelési Nyilatkozat',
+    'footer.terms': 'ÁSZF',
+
+    // Privacy Page
+    'privacy.title': 'Adatvédelem és Általános Szerződési Feltételek',
+    'privacy.back': 'Vissza a főoldalra',
+    'privacy.last_updated': 'Jelen dokumentum hatályba lépésének dátuma: 2026.05.07.',
+
+    'privacy.section.1.title': '1. Szolgáltató adatai',
+    'privacy.section.1.content': 'Név: Y Creative\nEmail: hello@ycreative.art\nWeboldal: https://ycreative.art',
+
+    'privacy.section.2.title': '2. A szolgáltatás leírása',
+    'privacy.section.2.content': 'A szolgáltató grafikai és digitális szolgáltatásokat nyújt, különösen: logótervezés, arculattervezés, nyomdai anyagok (névjegy, szórólap, stb.), pólódesign, weboldal tervezés és fejlesztés, dekorációs és vizuális megoldások. A szolgáltatás minden esetben egyedi megállapodás (árajánlat) alapján történik.',
+
+    'privacy.section.3.title': '3. Szerződés létrejötte',
+    'privacy.section.3.content': 'A szerződés az alábbi módon jön létre: írásos árajánlat elfogadásával (emailben vagy egyéb módon) vagy külön megállapodás aláírásával. Az ajánlat elfogadásával a megrendelő elfogadja jelen ÁSZF rendelkezéseit.',
+
+    'privacy.section.4.title': '4. Díjazás és fizetési feltételek',
+    'privacy.section.4.content': 'A szolgáltatások díja egyedi ajánlat alapján kerül meghatározásra. Fizetési módok: banki átutalás, készpénz. Számlázás: elektronikus számla kerül kiállításra a Billingo rendszerén keresztül. Fizetési határidő az ajánlatban vagy számlán meghatározottak szerint.',
+
+    'privacy.section.5.title': '5. Teljesítés',
+    'privacy.section.5.content': 'A teljesítési határidő minden esetben egyedileg kerül meghatározásra. A megrendelő köteles a szükséges adatokat időben biztosítani és visszajelzést adni a tervezetekre. Késedelem esetén a határidő módosulhat.',
+
+    'privacy.section.6.title': '6. Szerzői jogok',
+    'privacy.section.6.content': 'A szolgáltató által készített grafikai és digitális anyagok szerzői jogi védelem alatt állnak. A felhasználási jog a teljes díj megfizetését követően kerül átadásra és kizárólag az ajánlatban meghatározott felhasználásra érvényes. A szolgáltató jogosult a munkákat referenciaként felhasználni, kivéve ha erről külön megállapodás születik.',
+
+    'privacy.section.7.title': '7. Felelősség korlátozása',
+    'privacy.section.7.content': 'A szolgáltató nem vállal felelősséget harmadik fél által okozott károkért, hibás vagy hiányos ügyféladatokból eredő problémákért, technikai rendszerek (pl. hosting, külső szolgáltatók) hibáiért. A szolgáltató felelőssége legfeljebb a szolgáltatás díjának mértékéig terjed.',
+
+    'privacy.section.8.title': '8. Szerződés megszűnése',
+    'privacy.section.8.content': 'A szerződés megszűnik a teljesítéssel, közös megegyezéssel vagy felmondással. Megkezdett munka esetén a szolgáltató jogosult az addig elvégzett munka díjára.',
+
+    'privacy.section.9.title': '9. Kezelt adatok köre',
+    'privacy.section.9.content': 'Név, cégnév, email cím, telefonszám, számlázási cím, adószám.',
+
+    'privacy.section.10.title': '10. Az adatkezelés célja',
+    'privacy.section.10.content': 'Ajánlatadás, kapcsolattartás, szerződés teljesítése, számlázás, jogszabályi kötelezettségek teljesítése.',
+
+    'privacy.section.11.title': '11. Az adatkezelés jogalapja',
+    'privacy.section.11.content': 'GDPR 6. cikk (1) b) – szerződés teljesítése; GDPR 6. cikk (1) c) – jogi kötelezettség.',
+
+    'privacy.section.12.title': '12. Adattárolás időtartama',
+    'privacy.section.12.content': 'Kapcsolattartási adatok: max. 12 hónap; Szerződéses adatok: 5 év; Számlázási adatok: 8 év.',
+
+    'privacy.section.13.title': '13. Adatfeldolgozók',
+    'privacy.section.13.content': 'Számlázás: Billingo Technologies Zrt.; Tárhelyszolgáltató: Rackhost Zrt.; Könyvelés: A számlázási adatok a könyvelő részére kerülnek továbbításra.',
+
+    'privacy.section.14.title': '14. Adatbiztonság',
+    'privacy.section.14.content': 'A szolgáltató megfelelő technikai és szervezési intézkedéseket alkalmaz az adatok védelmére.',
+
+    'privacy.section.15.title': '15. Érintetti jogok',
+    'privacy.section.15.content': 'Az érintett jogosult hozzáférni az adataihoz, kérni azok helyesbítését, törlését vagy az adatkezelés korlátozását. Kapcsolat: hello@ycreative.art',
+
+    'privacy.section.16.title': '16. Jogorvoslat',
+    'privacy.section.16.content': 'Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH): https://naih.hu',
+
+    'privacy.section.17.title': '17. Cookie tájékoztató',
+    'privacy.section.17.content': 'A weboldal kizárólag működéshez szükséges sütiket használ. Nem történik analitikai mérés vagy marketing célú adatgyűjtés.',
+
+    'privacy.section.18.title': '18. Záró rendelkezések',
+    'privacy.section.18.content': 'A szolgáltató fenntartja a jogot a dokumentum módosítására. Az aktuális verzió a weboldalon kerül közzétételre.',
 
     // Advertising Page
     'advertising.title': 'Hirdetések, amelyek mellett lehetetlen szó nélkül továbblépni.',

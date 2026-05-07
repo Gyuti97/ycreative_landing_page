@@ -15,6 +15,12 @@ export function Proof() {
       url: 'https://bigicepdr.hu',
       description: t('proof.recentWorks.bigicepdr.desc'),
       color: 'from-purple-900 to-slate-900'
+    },
+    {
+      title: t('proof.recentWorks.designbyschmidt.title'),
+      url: 'https://designbyschmidt.eu',
+      description: t('proof.recentWorks.designbyschmidt.desc'),
+      color: 'from-slate-800 to-slate-900'
     }
   ];
 
